@@ -3,6 +3,7 @@ package com.example.recycleviewapp;
 import java.util.ArrayList;
 
 public class Alumno {
+    private int id;
     private String carrera;
     private String nombre;
     private int img;
@@ -19,6 +20,13 @@ public class Alumno {
 
     }
 
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
+    }
     public String getGrado() {
         return carrera;
     }
@@ -68,4 +76,6 @@ public class Alumno {
 
         return alumnos;
     }
+
+
 }
