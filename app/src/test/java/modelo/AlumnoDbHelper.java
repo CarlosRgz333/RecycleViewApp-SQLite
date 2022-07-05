@@ -9,7 +9,8 @@ public class AlumnoDbHelper extends SQLiteOpenHelper {
     private static final String INTEGER_TYPE = " INTEGER";
     private static final String COMMA_SEP = " ,";
 
-    private static final String SQL_CREATE_ALUMNO = "CREATE TABLE " + DefineTabla.Alumnos.TABLE_NAME + " (" +
+    private static final String SQL_CREATE_ALUMNO = "CREATE TABLE " +
+            DefineTabla.Alumnos.TABLE_NAME + " (" +
             DefineTabla.Alumnos.COLUMN_NAME_ID + " INTEGER PRIMARY KEY, " +
             DefineTabla.Alumnos.COLUMN_NAME_MATRICULA + TEXT_TYPE + COMMA_SEP +
             DefineTabla.Alumnos.COLUMN_NAME_NOMBRE + TEXT_TYPE + COMMA_SEP +
