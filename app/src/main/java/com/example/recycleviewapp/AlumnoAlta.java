@@ -49,13 +49,13 @@ public class AlumnoAlta extends AppCompatActivity {
                 if(alumno == null){
                     //Agregar u nuevo alumno
                     alumno = new Alumno();
-                    alumno.setGrado(carrera);
+                    alumno.setGrado(txtGrado.getText().toString());
                     alumno.setMatricula(txtMatricula.getText().toString());
                     alumno.setNombre(txtNombre.getText().toString());
                     alumno.setImg(R.drawable.us01);
 
                     if(validar()){
-                        Aplicacion.alumno.add(alumno);
+                        Aplicacion.alumnos.add(alumno);
                         setResult(Activity.RESULT_OK);
                         finish();
                     }else{
@@ -68,9 +68,9 @@ public class AlumnoAlta extends AppCompatActivity {
                     alumno.setNombre(txtNombre.getText().toString());
                     alumno.setGrado(txtGrado.getText().toString());
 
-                    Aplicacion.alumno.get(posicion).setMatricula(alumno.getMatricula());
-                    Aplicacion.alumno.get(posicion).setMatricula(alumno.getNombre());
-                    Aplicacion.alumno.get(posicion).setMatricula(alumno.getGrado());
+                    Aplicacion.alumnos.get(posicion).setMatricula(alumno.getMatricula());
+                    Aplicacion.alumnos.get(posicion).setNombre(alumno.getNombre());
+                    Aplicacion.alumnos.get(posicion).setGrado(alumno.getGrado());
 
                     Toast.makeText(getApplicationContext(), " se modifico con exito", Toast.LENGTH_SHORT).show();
                 }
