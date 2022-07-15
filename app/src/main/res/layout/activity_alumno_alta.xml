@@ -20,7 +20,9 @@
         <EditText
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:id="@+id/txtMatricula">
+            android:id="@+id/txtMatricula"
+            android:inputType="number">
+            android:textSize="20dp"
         </EditText>
         <TextView
             android:layout_width="match_parent"
@@ -32,6 +34,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:id="@+id/txtNombre"
+            android:textSize="20dp"
             android:hint="Paterno, Materno, Nombres">
         </EditText>
 
@@ -75,11 +78,20 @@
                 <Button
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:text="Borrar"
+                    android:id="@+id/btnBorrar"
+                    android:layout_span="2">
+
+                </Button>
+                <Button
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
                     android:text="Regresar"
                     android:id="@+id/btnRegresar"
                     android:layout_span="2">
 
                 </Button>
+
             </TableRow>
 
 

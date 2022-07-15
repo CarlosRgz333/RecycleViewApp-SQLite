@@ -1,6 +1,7 @@
 package com.example.recycleviewapp;
 
 import android.content.Context;
+import android.net.Uri;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -11,7 +12,7 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import java.util.ArrayList;
 
-public class MiAdaptador extends RecyclerView.Adapter<MiAdaptador.ViewHolder> implements View.OnClickListener {
+public class MiAdaptador extends RecyclerView.Adapter<MiAdaptador.ViewHolder> implements View.OnClickListener{
     protected ArrayList<Alumno> listaAlumnos;
     private View.OnClickListener listener;
     private Context context;
@@ -37,7 +38,12 @@ public class MiAdaptador extends RecyclerView.Adapter<MiAdaptador.ViewHolder> im
         holder.txtMatricula.setText(alumno.getMatricula());
         holder.txtNombre.setText(alumno.getNombre());
         holder.txtCarrera.setText(alumno.getGrado());
-        holder.idImagen.setImageResource(alumno.getImg());
+        Uri uri = null;
+        if(alumno.getImg()!=null){
+            uri = Uri.parse(alumno.getImg());
+            holder.idImagen.setImageURI(uri);
+        }
+
     }
 
     @Override
